@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>DoReact</title>
+</head>
+<body>
+    
+    <div class="tt">
+        <div class="bx">
+
+            <div class="bc">
+                <div class="nm">
+                    <h2>DoReact</h2>
+                </div>
+    
+                <div class="serc">
+                   <div class="ser">
+                       <input type="text" id="search"><i onkeyup="" onclick="mostrarResult()" class="fas fa-search"></i>
+                   </div>
+    
+                   <i onclick="openClose()" class="fas fa-plus-square ii"></i>
+                </div>
+            </div>
+
+            <div class="lister">
+                <div class="lis">
+                    <% membros.forEach(memb =>{%> 
+                        <h6 class="teste"></h6>
+
+                        <h5 class="menb"><span class="nome"><%= memb.nome %></span> => <%= memb.numero %></h5>
+                        
+                    <%}) %>
+                </div>
+            </div>
+
+            <div class="ffl">
+                <div class="ff">
+                    <h5>Uma simples aplicacao em React para registro e listagem dos membros Comunidade Javascript de Maputo </h5>
+                    <a href="http://www.jsconfmoz.com/">www.jsconfmoz.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add">
+        <div class="ad">
+            <div class="close">
+                <i onclick="closeOpen()" class="fas fa-times"></i>
+            </div>
+
+            <form method="POST" action="/cadastrar">
+
+                <div class="asd">
+                <h3>Nome:</h3>
+                <input type="text" name="nome"><br>
+    
+                <h3>Numero:</h3>
+                <input type="text" name="numero"><br>
+    
+                <button type="submit">Cadastrar</button>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+
+    <h2 class="show"></h2>
+
+    <script src="../js/react.js"></script>
+    <script src="https://kit.fontawesome.com/48b1ba7f30.js" crossorigin="anonymous"></script>
+</body>
+</html>
